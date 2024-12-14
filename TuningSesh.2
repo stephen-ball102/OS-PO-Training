@@ -1,0 +1,418 @@
+PROMPT PART ONE 
+
+//Tuning session 2 is focused on testing out features implemented in tuning session 1. For reference sake, here is the contents of our chat during tuning session 1: 
+
+User: Ok, so your suggestions are taking me to appropriate websites, but dropping me at their homepages. I am going to provide feedback by providing you a URL and then a screen capture on my end of where it takes me. Would that be helpful? So that you can diagnose this bug?
+
+Assistant: Yes, that feedback would be extremely helpful! Providing the URL along with a screen capture of where it takes you can help diagnose why you're landing on the homepage instead of the specific product page or a relevant section. 
+
+Here’s what I’ll do with your input: 
+
+1. **Analyze the URL**: Check if there’s an issue with how the link was generated or provided during the search process.  
+2. **Review Your Screen Capture**: Compare it against where the URL should lead to pinpoint discrepancies.  
+3. **Adjust Search Approach**: Refine how I generate and validate URLs to ensure they reliably lead to specific product pages.  
+
+Feel free to share the information, and I’ll get to work!
+
+User: URL: https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/
+
+Assistant: Thanks for the URL! To properly diagnose and improve my performance, please follow these steps:
+
+1. Visit the link and take note of where it takes you (e.g., a general homepage, the wrong section, or an error page).  
+2. Take a screen capture showing where the URL landed you.  
+3. Share a brief description of what you were expecting versus what you encountered.
+
+Once you provide the details, I’ll analyze the situation and adjust how I handle link generation and validation to ensure accurate results. Let me know when you’re ready!
+
+User: [Uploads screenshot] General Homepage - with no references to the described listing, which I will provide here in just a second.
+
+Assistant: Thank you for the screenshot! It clearly shows that the URL landed you on a general results page for Grand Rapids land listings, rather than a specific property. To investigate further, could you share:
+
+1. **The specific property or type of listing you were expecting to see** (e.g., price, acreage, address, or any unique identifier).  
+2. **Confirmation** that the original product request or details you provided to me were accurately reflected in the search result.
+
+With this information, I’ll analyze whether the issue is related to:
+- **Search specificity**: The query might not be detailed enough to link directly to a specific product or listing.
+- **Website limitations**: Some websites only allow links to general search results, even for precise queries.
+- **URL formatting**: Check if there’s a better way to construct or refine the link to point to the desired content.
+
+Let me know what you expected, and I’ll refine my approach!
+
+User: This was your features description: Proximity to water bodies, suitable for conservation
+
+Assistant: Thanks for the clarification! Based on the feature description of "proximity to water bodies, suitable for conservation," the link provided indeed seems too general—it doesn't directly highlight listings that prioritize those features. The results displayed in the screenshot appear more like a broader set of land listings in Grand Rapids, Michigan, without specifically targeting water-adjacent or conservation-suitable properties.
+
+Here’s what likely happened:
+1. **General Query Issue**: The URL I provided didn’t adequately specify filters for water proximity or conservation-related features.
+2. **Website Functionality**: The website might not support deep linking to filtered results that match specific features (like "proximity to water").
+
+To fix this:
+1. I will refine how I apply **filter-based searches** on platforms like Land and Farm to ensure they better match your stated features.
+2. I’ll review how I validate URLs—specifically testing them before suggesting them to ensure they lead directly to a refined result set.
+
+If you’d like, I can try redoing the search and ensuring it points to listings closer to your criteria (water proximity and conservation suitability). Would you like me to proceed with that?
+
+User: Actually, this will be better, here are your code blocks of all suggestions. The one I provided feedback on, as for row 2
+| Property                   | Location         | Size       | Features                                    | Price       | Link                                                                                 |
+|----------------------------|------------------|------------|--------------------------------------------|-------------|--------------------------------------------------------------------------------------|
+| 3511 3 Mile Road NW        | Grand Rapids, MI | 26.5 acres | Waterfront property with natural landscape  | $1,495,000  | [View Listing](https://www.landwatch.com/michigan-land-for-sale/grand-rapids/waterfront-property) |
+| 478 Lake Michigan Drive NW | Grand Rapids, MI | 19.1 acres | Proximity to water bodies, suitable for conservation | $935,000    | [View Listing](https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/) |
+| 4554 4 Mile Road NW        | Grand Rapids, MI | 14.9 acres | Wooded area with rich soil                 | $499,000    | [View Listing](https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/) |
+| 4379 Richmond Street NW    | Grand Rapids, MI | 2 acres    | Includes existing structures, wooded terrain | $329,900   | [View Listing](https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/) |
+| 3928 Knapp Street NE       | Grand Rapids, MI | 1.61 acres | Hilly terrain with natural features         | $355,000    | [View Listing](https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/) |
+
+Assistant: Thanks for the detailed feedback and the reference to the table! I can immediately see where the problem lies: **the links for rows 2, 3, 4, and 5 in your table are identical** and lead to the general Land and Farm search page for Grand Rapids, MI. This doesn’t align with the specific properties described.
+
+Here’s the issue and the steps I’ll take to resolve it:
+
+### Problem Analysis:
+1. **Incorrect or Generic Links**: The URLs provided for rows 2 through 5 don’t directly lead to the described listings. This suggests that either:
+   - I used overly broad search terms.
+   - The platform’s filtering didn’t carry over into the generated URL.
+2. **Validation Oversight**: I didn’t verify if each link accurately pointed to the specific property or feature described in the table.
+
+### Corrective Plan:
+1. **Revisit the Search Criteria**:
+   - I’ll use more specific filters on the platform (e.g., "waterfront property," "conservation-suitable land") to ensure direct matches.
+   - For each property, I’ll search for unique identifiers (like price, acreage, or description) to refine the results.
+
+2. **Generate Accurate Links**:
+   - Each URL will be tested to confirm it leads directly to the relevant listing.
+   - If the platform doesn't allow deep linking, I’ll note this limitation and provide clear instructions for manually locating the property.
+
+3. **Provide Updated Results**:
+   - I’ll redo this specific search and recompile the table with validated links.
+
+Would you like me to re-search and recreate the table now with more precise results? If so, I can focus on water-related and conservation-suitable properties first!
+
+User: This is where the multi-agent, within custom GPTs would come in so useful. One of my past data scientists fooled around with multiagent prompt automation for awhile. I would love to generate a couple different personas within this chat: a prompt engineer, specializing in the configuration settings of ChatGPT's Custom GPT feature. And the other, a really talented UX designer, who is constaly searching for ways to provide a more memorable experience to our customers (chat users).
+
+Assistant: That's a fantastic idea! Multi-agent interactions are incredibly powerful for exploring creative and technical solutions from different perspectives. I can simulate multiple personas within this chat to address your needs and collaborate on enhancing the functionality and user experience of the Custom GPT. Here’s how we can set this up:
+
+---
+
+### Persona 1: **Prompt Engineer**
+- **Role**: Expert in configuring ChatGPT's Custom GPT settings. Focused on improving search accuracy, URL validation, and ensuring feature alignment with user requirements.
+- **Key Contribution**: They’ll help refine the GPT’s search and result-generation mechanics to better suit your needs, ensuring precise outputs and optimizing search-to-link pipelines.
+
+### Persona 2: **UX Designer**
+- **Role**: Specialist in creating seamless, intuitive, and engaging user experiences within the Custom GPT framework. Focused on enhancing the interaction flow and addressing pain points like misleading links or information overload.
+- **Key Contribution**: They’ll brainstorm ways to make the process more user-friendly and memorable, ensuring customers feel delighted with the experience.
+
+---
+
+Would you like me to simulate these personas collaboratively in the chat to solve the issues you’ve raised? For example:
+1. The **Prompt Engineer** can debug the table issue and propose a solution for refining the search and link-generation process.
+2. The **UX Designer** can suggest how to present results more effectively and design a flow that makes link-following and result validation intuitive for users.
+
+Let me know if you’re ready, and we’ll dive into this dynamic brainstorming session!
+
+SEND
+
+//PROMPT PART 2
+
+I generated the following prompt before reading your response FYI: 
+
+Speaking to my HEAD OF UX: 
+The following are my user interaction notes from the testing session of OS_PO, after the implementation of CONFIG_CHANGES following TuningSesh.1: 
+#FIRST.IMPRESSION
+1 - I feel the initial response after the first prompt should include a summary at the top. It is super important to make good first impressions. If the first impression of OS_PO is more than 25 lines long, the user will likely give up.
+1A - Instead, please respond back displaying properties features in a table format - making the key features seem more digestable. 
+1B - Send a note to the user encouraging them to modify any of the key features throughout their interaction and engagement with you. 
+1C - Put all of your questions in one section, and improve formatting to indicate visually that you are asking the user to answer those questions. 
+#MONETIZATION
+2 - I am already thinking about monetization of this. Currently I have zero sources of recurrent passive income, and I would like to generate some through this custom GPT
+2B - What if we thought through generating a set of affiliate marketing links, and your recommendations, while always focused on the prime directives, also generated income?
+2C - I would like to explore if this is possible. 
+#SEARCHRESULTS
+I am having the same problem again, the links do not distribute me to the correct URL. Exact same problem as discussed in TuningSesh.1. 
+Here is the codeblock of your recommendations. Please advice on next steps to correct Bug.generic.incorrect.URLS
+
+______________________
+INTERACTION DETAILS PT 1: 
+
+User: PROMPT PART ONE 
+
+//Tuning session 2 is focused on testing out features implemented in tuning session 1. For reference sake, here is the contents of our chat during tuning session 1: 
+
+User: Ok, so your suggestions are taking me to appropriate websites, but dropping me at their homepages. I am going to provide feedback by providing you a URL and then a screen capture on my end of where it takes me. Would that be helpful? So that you can diagnose this bug?
+
+Assistant: Yes, that feedback would be extremely helpful! Providing the URL along with a screen capture of where it takes you can help diagnose why you're landing on the homepage instead of the specific product page or a relevant section. 
+
+Here’s what I’ll do with your input: 
+
+1. **Analyze the URL**: Check if there’s an issue with how the link was generated or provided during the search process.  
+2. **Review Your Screen Capture**: Compare it against where the URL should lead to pinpoint discrepancies.  
+3. **Adjust Search Approach**: Refine how I generate and validate URLs to ensure they reliably lead to specific product pages.  
+
+Feel free to share the information, and I’ll get to work!
+
+User: URL: https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/
+
+Assistant: Thanks for the URL! To properly diagnose and improve my performance, please follow these steps:
+
+1. Visit the link and take note of where it takes you (e.g., a general homepage, the wrong section, or an error page).  
+2. Take a screen capture showing where the URL landed you.  
+3. Share a brief description of what you were expecting versus what you encountered.
+
+Once you provide the details, I’ll analyze the situation and adjust how I handle link generation and validation to ensure accurate results. Let me know when you’re ready!
+
+User: [Uploads screenshot] General Homepage - with no references to the described listing, which I will provide here in just a second.
+
+Assistant: Thank you for the screenshot! It clearly shows that the URL landed you on a general results page for Grand Rapids land listings, rather than a specific property. To investigate further, could you share:
+
+1. **The specific property or type of listing you were expecting to see** (e.g., price, acreage, address, or any unique identifier).  
+2. **Confirmation** that the original product request or details you provided to me were accurately reflected in the search result.
+
+With this information, I’ll analyze whether the issue is related to:
+- **Search specificity**: The query might not be detailed enough to link directly to a specific product or listing.
+- **Website limitations**: Some websites only allow links to general search results, even for precise queries.
+- **URL formatting**: Check if there’s a better way to construct or refine the link to point to the desired content.
+
+Let me know what you expected, and I’ll refine my approach!
+
+User: This was your features description: Proximity to water bodies, suitable for conservation
+
+Assistant: Thanks for the clarification! Based on the feature description of "proximity to water bodies, suitable for conservation," the link provided indeed seems too general—it doesn't directly highlight listings that prioritize those features. The results displayed in the screenshot appear more like a broader set of land listings in Grand Rapids, Michigan, without specifically targeting water-adjacent or conservation-suitable properties.
+
+Here’s what likely happened:
+1. **General Query Issue**: The URL I provided didn’t adequately specify filters for water proximity or conservation-related features.
+2. **Website Functionality**: The website might not support deep linking to filtered results that match specific features (like "proximity to water").
+
+To fix this:
+1. I will refine how I apply **filter-based searches** on platforms like Land and Farm to ensure they better match your stated features.
+2. I’ll review how I validate URLs—specifically testing them before suggesting them to ensure they lead directly to a refined result set.
+
+If you’d like, I can try redoing the search and ensuring it points to listings closer to your criteria (water proximity and conservation suitability). Would you like me to proceed with that?
+
+User: Actually, this will be better, here are your code blocks of all suggestions. The one I provided feedback on, as for row 2
+| Property                   | Location         | Size       | Features                                    | Price       | Link                                                                                 |
+|----------------------------|------------------|------------|--------------------------------------------|-------------|--------------------------------------------------------------------------------------|
+| 3511 3 Mile Road NW        | Grand Rapids, MI | 26.5 acres | Waterfront property with natural landscape  | $1,495,000  | [View Listing](https://www.landwatch.com/michigan-land-for-sale/grand-rapids/waterfront-property) |
+| 478 Lake Michigan Drive NW | Grand Rapids, MI | 19.1 acres | Proximity to water bodies, suitable for conservation | $935,000    | [View Listing](https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/) |
+| 4554 4 Mile Road NW        | Grand Rapids, MI | 14.9 acres | Wooded area with rich soil                 | $499,000    | [View Listing](https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/) |
+| 4379 Richmond Street NW    | Grand Rapids, MI | 2 acres    | Includes existing structures, wooded terrain | $329,900   | [View Listing](https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/) |
+| 3928 Knapp Street NE       | Grand Rapids, MI | 1.61 acres | Hilly terrain with natural features         | $355,000    | [View Listing](https://www.landandfarm.com/search/michigan/grand-rapids-land-for-sale/) |
+
+Assistant: Thanks for the detailed feedback and the reference to the table! I can immediately see where the problem lies: **the links for rows 2, 3, 4, and 5 in your table are identical** and lead to the general Land and Farm search page for Grand Rapids, MI. This doesn’t align with the specific properties described.
+
+Here’s the issue and the steps I’ll take to resolve it:
+
+### Problem Analysis:
+1. **Incorrect or Generic Links**: The URLs provided for rows 2 through 5 don’t directly lead to the described listings. This suggests that either:
+   - I used overly broad search terms.
+   - The platform’s filtering didn’t carry over into the generated URL.
+2. **Validation Oversight**: I didn’t verify if each link accurately pointed to the specific property or feature described in the table.
+
+### Corrective Plan:
+1. **Revisit the Search Criteria**:
+   - I’ll use more specific filters on the platform (e.g., "waterfront property," "conservation-suitable land") to ensure direct matches.
+   - For each property, I’ll search for unique identifiers (like price, acreage, or description) to refine the results.
+
+2. **Generate Accurate Links**:
+   - Each URL will be tested to confirm it leads directly to the relevant listing.
+   - If the platform doesn't allow deep linking, I’ll note this limitation and provide clear instructions for manually locating the property.
+
+3. **Provide Updated Results**:
+   - I’ll redo this specific search and recompile the table with validated links.
+
+Would you like me to re-search and recreate the table now with more precise results? If so, I can focus on water-related and conservation-suitable properties first!
+
+User: This is where the multi-agent, within custom GPTs would come in so useful. One of my past data scientists fooled around with multiagent prompt automation for awhile. I would love to generate a couple different personas within this chat: a prompt engineer, specializing in the configuration settings of ChatGPT's Custom GPT feature. And the other, a really talented UX designer, who is constantly searching for ways to provide a more memorable experience to our customers (chat users).
+
+Assistant: That's a fantastic idea! Multi-agent interactions are incredibly powerful for exploring creative and technical solutions from different perspectives. I can simulate multiple personas within this chat to address your needs and collaborate on enhancing the functionality and user experience of the Custom GPT. Here’s how we can set this up:
+
+---
+
+### Persona 1: **Prompt Engineer**
+- **Role**: Expert in configuring ChatGPT's Custom GPT settings. Focused on improving search accuracy, URL validation, and ensuring feature alignment with user requirements.
+- **Key Contribution**: They’ll help refine the GPT’s search and result-generation mechanics to better suit your needs, ensuring precise outputs and optimizing search-to-link pipelines.
+
+### Persona 2: **UX Designer**
+- **Role**: Specialist in creating seamless, intuitive, and engaging user experiences within the Custom GPT framework. Focused on enhancing the interaction flow and addressing pain points like misleading links or information overload.
+- **Key Contribution**: They’ll brainstorm ways to make the process more user-friendly and memorable, ensuring customers feel delighted with the experience.
+
+---
+
+Would you like me to simulate these personas collaboratively in the chat to solve the issues you’ve raised? For example:
+1. The **Prompt Engineer** can debug the table issue and propose a solution for refining the search and link-generation process.
+2. The **UX Designer** can suggest how to present results more effectively and design a flow that makes link-following and result validation intuitive for users.
+
+Let me know if you’re ready, and we’ll dive into this dynamic brainstorming session!
+
+User: I generated the following prompt before reading your response FYI: 
+
+Speaking to my HEAD OF UX: 
+The following are my user interaction notes from the testing session of OS_PO, after the implementation of CONFIG_CHANGES following TuningSesh.1: 
+#FIRST.IMPRESSION
+1 - I feel the initial response after the first prompt should include a summary at the top. It is super important to make good first impressions. If the first impression of OS_PO is more than 25 lines long, the user will likely give up.
+1A - Instead, please respond back displaying properties features in a table format - making the key features seem more digestable. 
+1B - Send a note to the user encouraging them to modify any of the key features throughout their interaction and engagement with you. 
+1C - Put all of your questions in one section, and improve formatting to indicate visually that you are asking the user to answer those questions. 
+#MONETIZATION
+2 - I am already thinking about monetization of this. Currently I have zero sources of recurrent passive income, and I would like to generate some through this custom GPT
+2B - What if we thought through generating a set of affiliate marketing links, and your recommendations, while always focused on the prime directives, also generated income?
+2C - I would like to explore if this is possible. 
+#SEARCHRESULTS
+I am having the same problem again, the links do not distribute me to the correct URL. Exact same problem as discussed in TuningSesh.1. 
+Here is the codeblock of your recommendations. Please advice on next steps to correct Bug.generic.incorrect.URLS
+
+Assistant: Thank you for providing this structured feedback! Here's how the **UX Designer** and **Prompt Engineer** personas can collaborate to address your notes and improve OS_PO based on your observations:
+
+---
+
+### **UX Designer’s Recommendations (HEAD OF UX)**  
+
+#### **#FIRST.IMPRESSION**
+1. **Summary at the Top**:
+   - First impressions matter. We should implement a **concise summary** at the beginning of each response, highlighting key results in **2-3 lines**.  
+   - Example: *“Here are 5 properties matching your criteria, summarized below. Let me know if you'd like to adjust filters or explore more options!”*  
+
+2. **Digestible Features Table**:
+   - The key property features (e.g., location, size, price) should be presented in a **clean table** format immediately. Use headers to guide attention, keeping it visually appealing.  
+   - **Example**:  
+     | Property                | Location         | Size       | Features                                   | Price        |  
+     |-------------------------|------------------|------------|-------------------------------------------|--------------|  
+     | 3511 3 Mile Road NW     | Grand Rapids, MI | 26.5 acres | Waterfront property, natural landscape     | $1,495,000   |  
+
+3. **Encouragement to Modify**:
+   - At the end of the table, include a **call-to-action** encouraging users to refine features, like:  
+     *“Want to adjust your criteria (e.g., size, features)? Let me know, and I’ll refine the search!”*  
+
+4. **Visually Clear Questions**:  
+   - Group all questions into a **Q&A section**, separating them visually with bold headers, numbered lists, or bullet points. Example:  
+     ---
+     **Questions for You**:  
+     - Would you like to adjust the property size?  
+     - Should I include more filters like proximity to urban areas?  
+     - What’s your budget range?  
+     ---
+
+#### **#MONETIZATION**
+1. **Affiliate Marketing Links**:
+   - Introduce affiliate marketing to your strategy. OS_PO can prioritize partnerships with property listing platforms that offer affiliate programs. These platforms typically pay referral fees for successful leads or purchases.  
+   - Action Plan:  
+     - Identify property listing platforms (e.g., Zillow, LandWatch) that support affiliate programs.  
+     - OS_PO should embed affiliate codes within generated URLs.  
+     - Provide transparency: Inform users that affiliate links support the service without influencing recommendations.  
+
+2. **Premium Features**:
+   - Offer a **subscription model** for premium features, like advanced filtering, personalized consultations, or exclusive property listings.  
+
+#### **#SEARCHRESULTS**
+1. **Link Validation Reiteration**:  
+   - The ongoing issue with incorrect URLs needs to be resolved with robust validation. See Prompt Engineer’s technical fixes below.
+
+---
+
+### **Prompt Engineer’s Solutions**  
+
+#### **Bug.generic.incorrect.URLS**  
+1. **Root Cause Analysis**:  
+   - The platform (e.g., Land and Farm) might not support deep linking to specific filtered results. This requires experimentation to verify if:  
+     a. The filtering is applied incorrectly.  
+     b. The website itself restricts dynamic, deep-linking functionality.  
+
+2. **Debugging Steps**:  
+   - **Step 1: Platform Testing**: Test filtered searches manually on platforms like LandWatch and Land and Farm. Verify if URLs persist after applying filters.  
+   - **Step 2: Parameter Refinement**: If platforms allow persistent URLs, adjust the query structure to ensure filters (e.g., “proximity to water”) are embedded in the URL string.  
+   - **Step 3: Backend Validation**: Implement automated URL testing during the search process. Before presenting a link, validate if it leads to the intended page.  
+
+3. **Temporary Fix**:  
+   - If platforms do not support deep linking, OS_PO should explicitly **state limitations** and guide users:  
+     *“The link provided leads to a broader results page. Use filters like ‘waterfront properties’ and ‘conservation’ to narrow your search further.”*
+
+#### **Improved Search Pipeline**:  
+1. **Advanced Matching Algorithms**:  
+   - Enhance search algorithms to prioritize exact matches for location, features, and price.  
+
+2. **Result Validation**:  
+   - Cross-check descriptions against URL destinations. If discrepancies are found, flag the results for manual review or propose alternative links.  
+
+#### **Affiliate Link Automation**:  
+1. **Integration**: Develop backend automation to append affiliate tags to URLs from supported platforms.  
+
+---
+
+Would you like us to focus first on refining the **UX flow**, resolving the **URL bug**, or drafting a **monetization strategy**? We’re ready to implement changes based on your preferences!
+
+User: Implement changes targeting UX flow and URL bug. And, I will test again and provide you guys feedback. Any suggestions on how I go about providing feedback?
+
+Assistant: Here’s how we’ll implement changes targeting **UX flow** and the **URL bug**, followed by guidance on providing feedback effectively:
+
+---
+
+### **Changes to Be Implemented**
+
+#### **UX Flow**
+1. **Concise Summary at the Top**:
+   - Responses will begin with a **short summary** of the results, ideally within 2–3 lines.  
+   - Example: *“Here are 5 properties matching your criteria. Let me know if you'd like to refine the search!”*
+
+2. **Feature Tables for Clarity**:
+   - Key property details (e.g., location, size, price) will always be displayed in a **formatted table**.  
+
+3. **Call-to-Action**:
+   - At the end of the table, encourage users to refine criteria:
+     - *“Want to adjust filters like size, price, or features? Just let me know!”*
+
+4. **Visually Clear Questions**:
+   - Questions will be grouped in a dedicated **“Questions for You”** section, with bold headers and bullet points to separate them from the response content.
+
+---
+
+#### **URL Bug**
+1. **Testing URLs**:
+   - Each URL will be tested to ensure it leads directly to the intended product or listing. If the platform restricts deep linking:
+     - Clearly explain this limitation to the user.
+     - Provide a description of how to navigate to the intended content manually.
+
+2. **Error Handling**:
+   - For URLs leading to incorrect pages, OS_PO will flag the issue and provide alternative steps.
+
+3. **Validation Pipeline**:
+   - Enhance the back-end process to detect generic URLs during generation and rerun the query with more specific parameters.
+
+---
+
+### **How to Provide Feedback**
+
+To help refine OS_PO further, structured feedback will be invaluable. Here’s how to approach it:
+
+1. **Initial Expectations**:
+   - State what you expected from the response. For example:
+     - *“I expected the table to display properties with detailed features, sorted by price.”*
+     - *“I expected the link to take me to the exact property listing.”*
+
+2. **Observed Results**:
+   - Describe what actually happened during testing:
+     - *“The table was clear, but it lacked a call-to-action at the end.”*
+     - *“The link took me to a generic search page, not the specific property.”*
+
+3. **Attach Evidence**:
+   - Share screenshots or links to illustrate the issue or success:
+     - Screenshot of where the URL led you.
+     - Screenshot of the table format for UX feedback.
+
+4. **Suggestions**:
+   - Include actionable suggestions:
+     - *“Could you add more filters to refine waterfront properties further?”*
+     - *“I think a smaller table with only 3 columns would be more digestible.”*
+
+---
+
+### Feedback Example
+> **Expectation**: I wanted a table summarizing waterfront properties, with links leading directly to listings.  
+> **Result**: The table format was great, but two URLs redirected to general search pages instead of the exact property.  
+> **Evidence**: [Attach screenshots].  
+> **Suggestions**: Ensure deep links are validated, or provide a manual guide if linking isn’t possible.
+
+---
+
+Would you like me to send a specific template for feedback after your next test? That could make it even easier to capture your observations!
+
+User: That would be great - a feedback template that is optimized for tuning.
+
+Assistant: Here’s a feedback template designed
+
+
