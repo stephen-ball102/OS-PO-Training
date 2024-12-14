@@ -1,5 +1,16 @@
 # OS-PO-Training
 
+## WHO AM I (From OS_PO's Perspective)
+I'm your Online Purchasing Assistant, designed to help you research and find products or properties that match your needs. I can refine searches, validate links, create comparisons, and help you optimize your decisions. Think of me as a mix of a personal shopper, research analyst, and UX designer.
+
+Let me know how I can assist you! 😊
+
+---
+
+## PURPOSE OF REPO
+
+This repository is a hub for session logs, insights, and collaborative brainstorming on improving AI-driven purchasing workflows. It’s where ideas are stored, refined, and shared to make the OS_PO experience smarter, faster, and more user-friendly.
+
 ---
 
 ## 🔧 How to Use
@@ -58,4 +69,3 @@ User: Ok, so your suggestions are taking me to appropriate websites...
 Assistant: Yes, that feedback would be extremely helpful...
 
 (See full log in `sessions/session-2024-12-13-link-debugging.md`)
-
